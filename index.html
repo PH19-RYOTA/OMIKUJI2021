@@ -141,10 +141,97 @@
          document.getElementById("mainText_gamer").textContent = mainText;
       }
 
+      function inputMoney()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "5,000円を親に預ける";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "2,500円を使う";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "お小遣い：なし";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "お小遣い：500円";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "お小遣い：10,000円";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "お小遣い：5,000円";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "お小遣い：100,000円";   
+            break;
+         }
+         document.getElementById("result_money").textContent = resultText;
+         document.getElementById("mainText_money").textContent = mainText;
+      }
+  
+      function inputLove()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "好きな人にフラれる！？";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "好きな人に嫌われる！？";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "好きな人から遊びの誘いが・・・！？";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "好きな人に巡り合えるかも！？";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "彼女とお泊り！？";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "好きな人とデートに！？";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "彼女と貸切ディズニー！？";   
+            break;
+         }
+         document.getElementById("result_love").textContent = resultText;
+         document.getElementById("mainText_love").textContent = mainText;
+      }
   </script>
    <main>
-      <div id="akeome">
-         <h1>明けましておめでとうございます！！</h1>
+      <div>
+         <h1>新年明けましておめでとうございます！！</h1>
          <p id="center">今日のあなたの運勢をりょうたがお伝え致します！</p>
          <p id="center">引きたいおみくじを選んでください(o^―^o)</p>
       </div>
@@ -161,8 +248,8 @@
       </div>
 
       <div class="special_omikuji" id="center">
-         <h1 id="special_title">特別なおみくじ</h1>
-         <p>特別なおみくじを引くことができます。<br>金銭感覚が狂ったおみくじです。</p>
+         <h1 id="special_title">金銭おみくじ</h1>
+         <p>金銭おみくじを引くことができます。<br>金銭感覚が狂ったおみくじです。</p>
          
          <div class="button_omikuji">
             <button  onclick="inputSpecial()">おみくじを引く</button>
@@ -172,7 +259,7 @@
          <p id="mainText_special"></p>
       </div>
 
-      <div class="special_gamer" id="center">
+      <div class="gamer_omikuji" id="center">
          <h1 id="gamer_title">ゲーマーおみくじ</h1>
          <p>ゲーマーおみくじを引くことができます。<br>ゲーマーの世界を覗かえるかも？！</p>
          
@@ -183,11 +270,39 @@
          <h3 id="result_gamer"></h3>
          <p id="mainText_gamer"></p>
       </div>
+
+      <div class="money_omikuji" id="center">
+         <h1 id="money_title">小遣いみくじ</h1>
+         <p>小遣いみくじを引くことができます。<br>今日のボーナス(お小遣い)をお届け！
+         <br>※実際にお金が届くシステムはありません。<br>親御さんにねだってください</p>
+         
+         <div class="button_omikuji">
+            <button  onclick="inputMoney()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result_money"></h3>
+         <p id="mainText_money"></p>
+      </div>
+
+      <div class="love_omikuji" id="center">
+         <h1 id="love_title">恋みくじ</h1>
+         <p>恋みくじを引くことができます。<br>恋愛運を試せます！
+         
+         <div class="button_omikuji">
+            <button  onclick="inputLove()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result_love"></h3>
+         <p id="mainText_love"></p>
+      </div>
    </main>
    <footer>
-      <h1>製作者のりょうたにメールが送れるかも！？！？</h1>
+      <h1>製作者のりょうたにメールが送れるよ！</h1>
       <a href="mailto:udonkun419@gmail.com?SUBJECT=おみくじ.RYOTAより" target="_blank" id="mailText">
       メールを送る</a>
+      <br>
+      <a href="https://ph19-ryota.github.io/Portfolio/#" target="_blank" id="mailText">
+      RYOTAのポートフォリオサイト</a>
    </footer>
 </body>
 </html>
