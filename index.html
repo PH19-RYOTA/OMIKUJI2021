@@ -256,14 +256,14 @@
   </script>
    <main>
       <div>
-         <h1>新年明けましておめでとうございます！！</h1>
+         <h1 id="header_text">新年明けましておめでとうございます！！</h1>
          <p id="center">今日のあなたの運勢をりょうたがお伝え致します！</p>
          <p id="center">引きたいおみくじを選んでください(o^―^o)</p>
       </div>
 
       <div class="normal_omikuji" id="center">
          <h1 id="normal_title">普通のおみくじ</h1>
-         <p>一般的なおみくじを引くことができます。<br>ヒントも付いてきます</p>
+         <p id="setumei">一般的なおみくじを引くことができます。</p>
          <div class="button_omikuji">
             <button  onclick="inputNormal()">おみくじを引く</button>
          </div>
@@ -274,7 +274,7 @@
 
       <div class="special_omikuji" id="center">
          <h1 id="special_title">金銭おみくじ</h1>
-         <p>金銭おみくじを引くことができます。<br>金銭感覚が狂ったおみくじです。</p>
+         <p id="setumei">金銭おみくじを引くことができます。<br>金銭感覚が狂ったおみくじです。</p>
          
          <div class="button_omikuji">
             <button  onclick="inputSpecial()">おみくじを引く</button>
@@ -286,7 +286,7 @@
 
       <div class="gamer_omikuji" id="center">
          <h1 id="gamer_title">ゲーマーおみくじ</h1>
-         <p>ゲーマーおみくじを引くことができます。<br>ゲーマーの世界を覗かえるかも？！</p>
+         <p id="setumei">ゲーマーおみくじを引くことができます。<br>ゲーマーの世界を覗かえるかも？！</p>
          
          <div class="button_omikuji">
             <button  onclick="inputGamer()">おみくじを引く</button>
@@ -298,7 +298,7 @@
 
       <div class="money_omikuji" id="center">
          <h1 id="money_title">小遣いみくじ</h1>
-         <p>小遣いみくじを引くことができます。<br>今日のボーナス(お小遣い)をお届け！
+         <p id="setumei">小遣いみくじを引くことができます。<br>今日のボーナス(お小遣い)をお届け！
          <br>※実際にお金が届くシステムはありません。<br>親御さんにねだってください</p>
          
          <div class="button_omikuji">
@@ -311,7 +311,7 @@
 
       <div class="love_omikuji" id="center">
          <h1 id="love_title">恋みくじ</h1>
-         <p>恋みくじを引くことができます。<br>恋愛運を試せます！
+         <p id="setumei">恋みくじを引くことができます。<br>恋愛運を試せます！
          
          <div class="button_omikuji">
             <button  onclick="inputLove()">おみくじを引く</button>
