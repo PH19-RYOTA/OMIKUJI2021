@@ -102,50 +102,6 @@
          document.getElementById("mainText_special").textContent = mainText;
       }
   
-      function inputGamer()
-      {
-         var resultInt = Math.floor(Math.random() * 7)
-         switch(resultInt)
-         {
-            case 0 : 
-               resultText = "大凶"; 
-               mainText = "台パンして大切なものが壊れるかも(泣)";
-            break;
-
-            case 1 : 
-               resultText = "凶";
-               mainText = "叫び過ぎてゲーム１週間禁止になるかも";
-            break;
-            
-            case 2 : 
-               resultText = "末吉"; 
-               mainText = "有名クランとの試合でチームに招待されるかも";
-            break;
-            
-            case 3 : 
-               resultText = "小吉"; 
-               mainText = "配信したら同時接続数が１万人を越えるかも";
-            break;
-            
-            case 4 : 
-               resultText = "中吉"; 
-               mainText = "高性能PCもしくはPS5が貰えるかも";
-            break;
-            
-            case 5 : 
-               resultText = "吉"; 
-               mainText = "ゲーミングセットをサンタが少し遅れてくれるかも";   
-            break;
-            
-            case 6 : 
-               resultText = "大吉"; 
-               mainText = "超有名クランに入って大活躍できるかも";   
-            break;
-         }
-         document.getElementById("result_gamer").textContent = resultText;
-         document.getElementById("mainText_gamer").textContent = mainText;
-      }
-
       function inputMoney()
       {
          //#region 大凶&吉設定
@@ -257,7 +213,7 @@
    <main>
       <div>
          <h1 id="header_text">新年明けましておめでとうございます！！</h1>
-         <p id="center">今日のあなたの運勢をりょうたがお伝え致します！</p>
+         <p id="center">あなたの運勢をりょうたがお届け致します！</p>
          <p id="center">引きたいおみくじを選んでください(o^―^o)</p>
       </div>
 
@@ -282,18 +238,6 @@
 
          <h3 id="result_special"></h3>
          <p id="mainText_special"></p>
-      </div>
-
-      <div class="gamer_omikuji" id="center">
-         <h1 id="gamer_title">ゲーマーおみくじ</h1>
-         <p id="setumei">ゲーマーおみくじを引くことができます。<br>ゲーマーの世界を覗かえるかも？！</p>
-         
-         <div class="button_omikuji">
-            <button  onclick="inputGamer()">おみくじを引く</button>
-         </div>
-
-         <h3 id="result_gamer"></h3>
-         <p id="mainText_gamer"></p>
       </div>
 
       <div class="money_omikuji" id="center">
