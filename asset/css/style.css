@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+body
+{
+   margin:0;
+   padding:0;
+   font-family: "游明朝",Yumincho,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HG明朝E","M S 明朝",serif;
+   background-color: white;
+}
+
+#akeome
+{
+   background: linear-gradient(90deg,green,red,green);
+   color: white;
+}
+
+h1
+{
+   text-align: center;
+}
+
+.button_omikuji
+{
+   text-align: center;
+}
+
+#center
+{
+   text-align: center;
+}
+
+#normal_title
+{
+   background-color: black;
+   color: white;
+}
+
+#special_title
+{
+   background-color: yellow;
+   color: black;
+}
+
+#gamer_title
+{
+   background: linear-gradient(90deg,skyblue,purple,skyblue);
+   color: white;
+}
+
+footer
+{
+   text-align: center;
+   background: linear-gradient(100deg,white,black);
+}
+
+#mailText
+{
+   color: white;
+}

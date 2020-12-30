@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>おみくじ.RYOTA</title>
+   <link rel="icon" href="asset/img/ryota_logo.png">
+   <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+   <script>
+      function inputNormal()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "人にお礼を言うと良いことがあるかも？？";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "人を褒めると良いことがあるかも？？";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "喧嘩してた人と仲直りすると奇跡が起きるかも？？";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "お金が空から降ってくるかも？？";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "好きな人に会えるかも？？";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "有名人に会えるかも？？";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "幸せが訪れるかも？？";   
+            break;
+         }
+         document.getElementById("result").textContent = resultText;
+         document.getElementById("mainText").textContent = mainText;
+      }
+   
+      function inputSpecial()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "2億円の借金を背負うかも…";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "あなたの未来の会社の株が暴落するかも…";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "一部上場企業の社長と気が合うかも…";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "自販機の下に10万円が落ちてるかも…";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "マクドナルドの株を貰えるかも…";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "固定資産税で毎月1000万円入ってくるかも…";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "日本を買い取れる額が銀行口座に入っているかも…";   
+            break;
+         }
+         document.getElementById("result_special").textContent = resultText;
+         document.getElementById("mainText_special").textContent = mainText;
+      }
+  
+      function inputGamer()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "台パンして大切なものが壊れるかも(泣)";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "叫び過ぎてゲーム１週間禁止になるかも";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "有名クランとの試合でチームに招待されるかも";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "配信したら同時接続数が１万人を越えるかも";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "高性能PCもしくはPS5が貰えるかも";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "ゲーミングセットをサンタが少し遅れてくれるかも";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "超有名クランに入って大活躍できるかも";   
+            break;
+         }
+         document.getElementById("result_gamer").textContent = resultText;
+         document.getElementById("mainText_gamer").textContent = mainText;
+      }
+
+  </script>
+   <main>
+      <div id="akeome">
+         <h1>明けましておめでとうございます！！</h1>
+         <p id="center">今日のあなたの運勢をりょうたがお伝え致します！</p>
+         <p id="center">引きたいおみくじを選んでください(o^―^o)</p>
+      </div>
+
+      <div class="normal_omikuji" id="center">
+         <h1 id="normal_title">普通のおみくじ</h1>
+         <p>一般的なおみくじを引くことができます。<br>ヒントも付いてきます</p>
+         <div class="button_omikuji">
+            <button  onclick="inputNormal()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result"></h3>
+         <p id="mainText"></p>
+      </div>
+
+      <div class="special_omikuji" id="center">
+         <h1 id="special_title">特別なおみくじ</h1>
+         <p>特別なおみくじを引くことができます。<br>金銭感覚が狂ったおみくじです。</p>
+         
+         <div class="button_omikuji">
+            <button  onclick="inputSpecial()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result_special"></h3>
+         <p id="mainText_special"></p>
+      </div>
+
+      <div class="special_gamer" id="center">
+         <h1 id="gamer_title">ゲーマーおみくじ</h1>
+         <p>ゲーマーおみくじを引くことができます。<br>ゲーマーの世界を覗かえるかも？！</p>
+         
+         <div class="button_omikuji">
+            <button  onclick="inputGamer()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result_gamer"></h3>
+         <p id="mainText_gamer"></p>
+      </div>
+   </main>
+   <footer>
+      <h1>製作者のりょうたにメールが送れるかも！？！？</h1>
+      <a href="mailto:udonkun419@gmail.com?SUBJECT=おみくじ.RYOTAより" target="_blank" id="mailText">
+      メールを送る</a>
+   </footer>
+</body>
+</html>
