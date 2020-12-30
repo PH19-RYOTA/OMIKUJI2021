@@ -55,12 +55,17 @@
    
       function inputSpecial()
       {
+         //#region 億円借金設定
+         var Okumin = 1;
+         var Okumax = 30;
+         var random_Oku = Math.floor(Math.random() * ((Okumax + 1) - Okumin) + Okumin);
+         //#endregion
          var resultInt = Math.floor(Math.random() * 7)
          switch(resultInt)
          {
             case 0 : 
                resultText = "大凶"; 
-               mainText = "2億円の借金を背負うかも…";
+               mainText = random_Oku + "億円の借金を背負うかも…";
             break;
 
             case 1 : 
@@ -143,17 +148,37 @@
 
       function inputMoney()
       {
+         //#region 大凶&吉設定
+         var Dmin = 5000;
+         var Dmax = 10000;
+         var random_daikyou = Math.floor(Math.random() * ((Dmax + 1) - Dmin) + Dmin);
+         //#endregion
+         //#region 凶&小吉設定
+         var Kmin = 1000;
+         var Kmax = 3000;
+         var random_kyou = Math.floor(Math.random() * ((Kmax + 1) - Kmin) + Kmin);
+         //#endregion
+         //#region 中吉設定
+         var Cmin = 10000;
+         var Cmax = 15000;
+         var random_chukichi = Math.floor(Math.random() * ((Cmax + 1) - Cmin) + Cmin);
+         //#endregion
+         //#region 大吉設定
+         var DImin = 100000;
+         var DImax = 1000000;
+         var random_daikichi = Math.floor(Math.random() * ((DImax + 1) - DImin) + DImin);
+         //#endregion
          var resultInt = Math.floor(Math.random() * 7)
          switch(resultInt)
          {
             case 0 : 
                resultText = "大凶"; 
-               mainText = "5,000円を親に預ける";
+               mainText = random_daikyou + "円を親に預ける";
             break;
 
             case 1 : 
                resultText = "凶";
-               mainText = "2,500円を使う";
+               mainText = "１日で" + random_kyou + "円を使わなければいけない";
             break;
             
             case 2 : 
@@ -163,22 +188,22 @@
             
             case 3 : 
                resultText = "小吉"; 
-               mainText = "お小遣い：500円";
+               mainText = "お小遣い：" + random_kyou + "円";
             break;
             
             case 4 : 
                resultText = "中吉"; 
-               mainText = "お小遣い：10,000円";
+               mainText = "お小遣い：" + random_chukichi +"円";
             break;
             
             case 5 : 
                resultText = "吉"; 
-               mainText = "お小遣い：5,000円";   
+               mainText = "お小遣い：" + random_daikyou + "円";   
             break;
             
             case 6 : 
                resultText = "大吉"; 
-               mainText = "お小遣い：100,000円";   
+               mainText = "お小遣い："+ random_daikichi +"円";   
             break;
          }
          document.getElementById("result_money").textContent = resultText;
