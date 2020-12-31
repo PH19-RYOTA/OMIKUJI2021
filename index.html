@@ -209,6 +209,50 @@
          document.getElementById("result_love").textContent = resultText;
          document.getElementById("mainText_love").textContent = mainText;
       }
+      
+      function inputKenkou()
+      {
+         var resultInt = Math.floor(Math.random() * 7)
+         switch(resultInt)
+         {
+            case 0 : 
+               resultText = "大凶"; 
+               mainText = "今年は骨折日和になるかも？！";
+            break;
+
+            case 1 : 
+               resultText = "凶";
+               mainText = "今年は熱に見舞われるかも？！";
+            break;
+            
+            case 2 : 
+               resultText = "末吉"; 
+               mainText = "今年は病気にならない年かも？！";
+            break;
+            
+            case 3 : 
+               resultText = "小吉"; 
+               mainText = "今年は健康な年になるかも？！";
+            break;
+            
+            case 4 : 
+               resultText = "中吉"; 
+               mainText = "今年は人を助ける年になるかも？！";
+            break;
+            
+            case 5 : 
+               resultText = "吉"; 
+               mainText = "今年は年寄りを助ける年になるかも？！";   
+            break;
+            
+            case 6 : 
+               resultText = "大吉"; 
+               mainText = "今年は人助けをして色んな人に褒められる年になるかも？！";   
+            break;
+         }
+         document.getElementById("result_kenkou").textContent = resultText;
+         document.getElementById("mainText_kenkou").textContent = mainText;
+      }
   </script>
    <main>
       <div>
@@ -263,6 +307,18 @@
 
          <h3 id="result_love"></h3>
          <p id="mainText_love"></p>
+      </div>
+
+      <div class="kenkou_omikuji" id="center">
+         <h1 id="kenkou_title">健康みくじ</h1>
+         <p id="setumei">健康みくじを引くことができます。<br>今年の健康運を知ることができます
+         
+         <div class="button_omikuji">
+            <button  onclick="inputKenkou()">おみくじを引く</button>
+         </div>
+
+         <h3 id="result_kenkou"></h3>
+         <p id="mainText_kenkou"></p>
       </div>
    </main>
    <footer>
